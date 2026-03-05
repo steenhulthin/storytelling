@@ -39,16 +39,4 @@ Have fun and keep experimenting. Small prompt changes can create very different 
 
 ---
 
-## Technical notes
-- Max new tokens:
-  Sets the generation length cap for each response (`max_new_tokens`).
-- Temperature:
-  Scales token probabilities before sampling.
-  `temperature < 1.0` sharpens the distribution (more deterministic).
-  `temperature > 1.0` flattens it (more random).
-- Top-p (nucleus sampling):
-  Samples from the smallest token set whose cumulative probability reaches `p`.
-  Lower `top_p` narrows candidate tokens; higher `top_p` broadens them.
-- Interactions:
-  High temperature + high top-p increases diversity but can reduce coherence.
-  Lower settings generally improve consistency.
+TinyStories-1M is a ~1M-parameter GPT-style causal language model trained on the TinyStories dataset for short, coherent story continuation (Model: https://huggingface.co/roneneldan/TinyStories-1M, Paper: https://arxiv.org/abs/2305.07759, PDF: https://arxiv.org/pdf/2305.07759.pdf).
