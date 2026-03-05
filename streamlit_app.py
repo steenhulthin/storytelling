@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 
 import storygenerator
 
@@ -11,6 +12,11 @@ st.caption("🤖 Chat interface powered by roneneldan/TinyStories-1M (!)")
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+model_info_path = Path(__file__).with_name("tinystories.md")
+model_info_markdown = model_info_path.read_text(encoding="utf-8") if model_info_path.exists() else (
+    "TinyStories info file not found."
+)
+
 
 with st.sidebar:
     st.subheader("Generation settings")
@@ -18,7 +24,7 @@ with st.sidebar:
     temperature = st.slider("Temperature", min_value=0.1, max_value=1.5, value=0.8, step=0.1)
     top_p = st.slider("Top-p", min_value=0.1, max_value=1.0, value=0.95, step=0.05)
     st.divider()
-    st.caption("Set your Hugging Face token in env var `HF_reader`.")
+    st.markdown(model_info_markdown)
 
 
 for message in st.session_state.messages:
