@@ -3,9 +3,9 @@ import streamlit as st
 import storygenerator
 
 
-st.set_page_config(page_title="TinyStories Chat", page_icon=":book:")
-st.title("TinyStories Chat")
-st.caption("Chat interface powered by roneneldan/TinyStories-1M")
+st.set_page_config(page_title="TinyStories Chat", page_icon=":open_book:")
+st.title("Gibberish Childrens Stories")
+st.caption("🤖 Chat interface powered by roneneldan/TinyStories-1M (!)")
 
 
 if "messages" not in st.session_state:
