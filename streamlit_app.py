@@ -27,11 +27,9 @@ for message in st.session_state.messages:
 
 
 def build_model_prompt(messages: list[dict[str, str]]) -> str:
-    lines = ["Once Upon a time \n"]
+    lines = []
     for message in messages:
-        role = "User" if message["role"] == "user" else "Assistant"
-        lines.append(f"{role}: {message['content']}")
-    lines.append("Assistant:")
+        lines.append(message["content"])
     return "\n".join(lines)
 
 
