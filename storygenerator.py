@@ -1,10 +1,10 @@
-import os
+from streamlit import secrets
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-token = os.getenv("HF_reader")
+token = secrets["HF_TOKEN"]
 
 model_name = "roneneldan/TinyStories-1M"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
