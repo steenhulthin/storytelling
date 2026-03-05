@@ -2,27 +2,23 @@
 
 ## What this is
 This app helps you make short, playful stories.
-Type an idea, and it continues your story with the same vibe.
+Type the beginning of a story, and it continues your story with the same vibe.
 
 ## How to get the best results
 - Start simple: one character and one situation.
-- Ask for one short step at a time.
-- If the result is weird, click again or change your prompt.
-- Be specific: mood, place, and style help a lot.
-- Try fun twists like "make it silly" or "add a dragon."
 
 ## Things to expect
 - Sometimes the story may drift or get random.
 - It may repeat itself now and then.
-- It can mix up details in longer stories.
-- It is best for creative play, not facts.
+- It can mix up details.
+- It is for creative play, _not_ facts.
 
 ## Quick story ideas
 - "A shy ghost opens a bakery in Copenhagen."
 - "Two kids find a tiny door in an old tree."
 - "A pirate cat loses her map before sunset."
 
-Have fun and keep experimenting. Small prompt changes can create very different stories.
+Have fun! 
 
 ## What the sliders change
 - Max new tokens:
@@ -39,4 +35,8 @@ Have fun and keep experimenting. Small prompt changes can create very different 
 
 ---
 
-TinyStories-1M is a ~1M-parameter GPT-style causal language model trained on the TinyStories dataset for short, coherent story continuation (Model: https://huggingface.co/roneneldan/TinyStories-1M, Paper: https://arxiv.org/abs/2305.07759, PDF: https://arxiv.org/pdf/2305.07759.pdf).
+**TinyStories-1M** is a ~1M-parameter GPT-style causal language model trained on the TinyStories dataset for short, coherent story continuation (Model: https://huggingface.co/roneneldan/TinyStories-1M, Paper: https://arxiv.org/abs/2305.07759, PDF: https://arxiv.org/pdf/2305.07759.pdf).
+
+**Note:** This app runs _entirely_ in Python on the server (no browser-side model inference) !
+Stack: Streamlit UI + Hugging Face Transformers + PyTorch (+ Accelerate for device handling).
+The model is loaded from Hugging Face Hub and generation runs in your Python runtime.
