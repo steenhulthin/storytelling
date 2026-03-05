@@ -3,6 +3,7 @@
 ## What this is
 This app helps you make short, playful stories.
 Type the beginning of a story, and it continues your story with the same vibe.
+**It only knows English**
 
 ## How to get the best results
 - Start simple: one character and one situation.
